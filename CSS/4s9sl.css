@@ -1,0 +1,195 @@
+/* Start Global Rules */
+:root {
+    --main-color: #2196F3;
+    --main-color-alt: #1787e0;
+    --main-trans: 0.3s;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+/* Small */
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+    /* Medium */
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+    /* Large */
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+/* End Global Rules */
+
+/* Start Header */
+.header {
+    background-color: white;
+    position: relative;
+    -moz-box-shadow:0 0 10px #ddd; 
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -o-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .container .logo {
+    display: block;
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 26px;
+    text-transform: capitalize;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .header .container .logo {
+        width: 100%;
+        height: 50px;
+    }
+}
+.header .container .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+    .header .container .main-nav {
+        margin: auto;
+    }
+}
+.header .container .main-nav > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    color: black;
+    text-transform: capitalize;
+    height: 72px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: var(--main-trans);
+    position: relative;
+}
+@media (max-width: 767px) {
+    .header .container .main-nav > li > a {
+        padding: 10px;
+        font-size: 14px;
+        margin: auto;
+        height: 40px;
+    }
+}
+.header .container .main-nav > li > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 4px;
+    background-color: var(--main-color);
+    transform: rotateY(90deg);
+    transform-origin: left center;
+    transition: var(--main-trans);
+}
+@media (max-width: 767px) {
+    .header .container .main-nav > li > a::before {
+        height: 2px;
+    }
+}
+.header .container .main-nav > li > a:hover::before {
+    transform: rotateY(0deg);
+}
+.header .container .main-nav > li > a:hover {
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+/* End Header */
+
+/* Start Landing */
+.landing {
+    position: relative;
+    /* height: 100vh; */
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    background-color: #ECECEC;
+    width: 100%;
+    height: 100%;
+    transform: skewY(-6deg);
+    z-index: -1;
+    transform-origin: top left;
+    top: -40px;
+}
+.landing .container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+    min-height: calc(100vh - 72px);
+}
+.landing .container .text{
+    flex: 1;
+}
+.landing .container .text h1{
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: -2px;
+}
+.landing .container .text p{
+    font-size: 22px;
+    line-height: 1.8;
+    color: #777;
+    margin: 5px 0 0;
+    max-width: 500px;
+}
+.landing .container .image img {
+    width: 600px;
+    max-width: 100%;
+}
+.landing .go-down {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50% , -50%);
+    color: var(--main-color);
+    transition: var(--main-trans);
+}
+.landing .go-down:hover {
+    color: var(--main-color-alt);
+}
+/* End Landing */
