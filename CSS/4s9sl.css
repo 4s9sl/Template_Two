@@ -336,7 +336,7 @@ ul {
         left: 50%;
         top: 45%;
         transform: translate(-50% , -50%);
-        opacity: 0.7;
+        opacity: 0.45;
     }
     .landing .container .text {
         z-index: 50;
