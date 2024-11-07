@@ -467,6 +467,271 @@ ul {
 }
 /* End Gallery */
 
+/* Start Features */
+.features {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: white;
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
+}
+.features .container .box{
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.features .container .box .image {
+    position: relative;
+    overflow: hidden;
+}   
+.features .container .box .image::before {
+    content: "";
+    height: calc(100% - 9px);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.features .container .box .image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 170px 500px;
+    border-color: transparent transparent white transparent;
+    transition: var(--main-trans);
+}
+.features .container .box:hover .image::after {
+    border-width: 0px 0px 170px 0px;
+}
+.features .container .box .image img{
+    max-width: 100%;
+}
+.features .container .box .text h2{
+    width: fit-content;
+    margin: auto;
+    font-size: 40px;
+    text-transform: capitalize;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 25px;
+}
+.features .container .box .text h2::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 70%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .container .box .text p{
+    color: #777;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 30px 0;
+    padding: 25px;
+}
+.features .container .box .text a{
+    display: block;
+    width: fit-content;
+    margin: 0 auto 30px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 5px 30px;
+    font-weight: bold; 
+    font-size: 22px;
+    transition: var(--main-trans);
+}
+.features .container .quality .image::before{
+    background-color: #f43f3646;
+}   
+.features .container .quality h2::after{
+    background-color: #f44036;
+}
+.features .container .quality .text a {
+    color: #f44036;
+    border-color: #f44036;
+    background: linear-gradient(to right, #f44036 50% , white 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .container .time .image::before{
+    background-color: #0096872f;
+}   
+.features .container .time h2::after{
+    background-color: #009688;
+}
+.features .container .time .text a {
+    color: #009688;
+    border-color: #009688;
+    background: linear-gradient(to right, #009688 50% , white 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .container .passion .image::before{
+    background-color: #03a8f441;
+}   
+.features .container .passion h2::after{
+    background-color: #03a9f4;
+}
+.features .container .passion .text a {
+    color: #03a9f4;
+    border-color: #03a9f4;
+    background: linear-gradient(to right, #03a9f4 50% , white 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .container .box:hover .text a {
+    background-position: left bottom;
+    color: white;
+}
+/* End Features */
+
+/* Start Testimonials */
+.testimonials {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: #ececec;
+    position: relative;
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 55px 40px;
+    
+}
+.testimonials .container .box {
+    position: relative;
+    border-radius: 6px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 4px rgba(0, 0, 0, 7%);
+}
+.testimonials .container .box .image img {
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background);
+    max-width: 100%;
+}
+.testimonials .container .box h3 {
+    margin: 0;
+}
+.testimonials .container .box span {
+    display: block;
+    margin: 0px;
+}
+.testimonials .container .box .rate .filled {
+    color: #ffc107;
+}
+.testimonials .container .box p {
+    line-height: 1.5;
+    color: #777;
+    margin: 0;
+}
+/* End Testimonials */
+
+/* Start Team */
+.team {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: white;
+}
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 40px;
+    
+}
+.team .container .box {
+    position: relative;
+    z-index: 100;
+}
+.team .container .box::before,
+.team .container .box::after {
+    content: "";
+    position: absolute;
+    background-color: #f3f3f3;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: var(--main-trans);
+}
+.team .container .box::before {
+    width: calc(100% - 60px);
+    z-index: -2;
+}
+.team .container .box::after {
+    z-index: -1;
+    width: 0;
+    background-color: #e4e4e4;
+}
+.team .box:hover::after {
+    width: calc(100% - 60px);
+}
+.team .container .data{
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+.team .container .data img{
+    max-width: calc(100% - 60px);
+    border-radius: 10px;
+    transition: var(--main-trans);
+}
+.team .box:hover img {
+    filter: grayscale(100%);
+}
+.team .container .data .social{
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    align-items: center;
+}
+.team .container .data .social i {
+    color: #777;
+    transition: var(--main-trans);
+}
+.team .container .data .social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+}
+.team .container .data .social a:hover i {
+    color: var(--main-color);
+}
+.team .container .info {
+    padding-left: 75px;
+}
+.team .container .info h3 {
+    color: var(--main-color);
+    margin-bottom: 0;
+    font-size: 22px;
+    transition: var(--main-trans);
+}
+.team .box:hover h3 {
+    color: #777;
+}
+.team .container .info p {
+    color: #777;
+    margin-bottom: 15px;
+}
+/* End Team */
+
 /* Start Animation */
 @keyframes up-down {
     0% {
