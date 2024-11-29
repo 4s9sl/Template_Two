@@ -1085,6 +1085,88 @@ ul {
 
 /* End Events */
 
+/* Start Pricing Plans */
+.pricing {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--section-background);
+}
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    gap: 40px;
+}
+.pricing .container .box {
+    background-color: white;
+    box-shadow: 
+    0 12px 20px 0 rgb(0 0 0 / 13%),
+    0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+@media (min-width: 1200px) {
+    .pricing .container .center {
+        transform: translateY(-30px);
+    }
+}
+.pricing .container .box .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pricing .container .box .info h3{
+    margin: 20px 0;
+    font-size: 25px;
+}
+.pricing .container .box .info img {
+    width: 80px;
+}
+.pricing .container .box .info .price {
+    display: block;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+    width: fit-content;
+}
+.pricing .container .box .info .per {
+    color: #777;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.pricing .container .box ul {
+    margin-left: 40px;
+}
+.pricing .container .box ul li {
+    margin-bottom: 30px;
+    position: relative;
+}
+.pricing .container .box ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    font-weight: 900;
+    transform: translateY(-50%);
+    color: var(--main-color);
+}
+.pricing .container .box a {
+    display: block;
+    padding: 10px 20px;
+    border: 2px solid var(--main-color);
+    width: fit-content;
+    margin: 0 auto 30px;
+    border-radius: 6px;
+    color: var(--main-color);
+    font-weight: bold;
+    transition: var(--main-trans);
+}
+.pricing .container .box a:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+/* Start Pricing Plans */
+
 /* Start Animation */
 @keyframes up-down {
     0% {
